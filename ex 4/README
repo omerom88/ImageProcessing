@@ -1,0 +1,52 @@
+omerom88 
+Impr – ex4
+Omer Rom
+301544383 
+
+- Matlab Version: R2015a
+- List of files: ex4.zip that contains: 
+	code lib:	
+	- README - this file.	
+	- accumulateHomographies.m - Accumulate homography matrix sequence.
+	- applyHomography.m - Transform coordinates pos1 to pos2 using homography H12.
+	- displayMatches.m - Display matched pt. pairs overlayed on given image pair.
+	- findFeatures.m - Detect feature points in pyramid and sample their descriptors.
+	- generatePanorama -  Load set of RGB frames and combine them into a single RGB panorama.
+	- HarrisCornerDetector - Extract key points from the image.
+	- leastSquaresHomography.m - Compute least square fit to homography transforming between two sets of points.
+	- matchFeatures.m -  Match feature descriptors in desc1 and desc2.
+	- nonMaximumSuppression.m - Find local maxima of corner metric matrix.
+	- ransacHomography.m - Fit homography to maximal inliers given point matches using the RANSAC algorithm.
+	- renderPanorama.m - Renders a set of images into a combined panorama image.
+	- sampleDescriptor.m - Sample a MOPS-like descriptor at given positions in the image.
+	- spreadOutCorners.m - etects Harris corners in an nxm grid of sub-images of im.
+	- exemplePanoramas.m - generates all of the provided example panoramas.
+	- myPanoramas.m - generates all of my images.
+	functions from ex3:
+	- GaussianPyramid.m - construct a Gaussian pyramid of a given image.
+	- LaplacianPyramid.m - construct a Laplacian pyramid of a given image.
+	- LaplacianToImage.m - reconstruction of an image from its Laplacian Pyramid.
+	- pyramidBlending.m - blend two given images into one blended image.
+	- expand.m - expands an image to double size, using a blurring mask.
+	- reduce.m - reduce image size to an half of its size, using blurring mask.
+	- buildGaussianMask.m - building a Gaussian filter. (from ex2)
+	- ImReadAndConvert - Reads a given image file and converts it into a given representation. (from ex1)
+	
+	data lib:
+	- Additional images:
+		- a1.jpg
+		- a2.jpg
+		- a3.jpg
+		- b1.jp
+		- b2.jp
+		- b3.jp
+
+- comments:
+while i worked on my panorams i find out that my function from ex3 are not perfect, 
+so i added some conditions to fit the dimintions of my images (in ex3 we assumed 
+that the sizes of the input are ^2)furthermore, i understand from Inbar that 
+youll check the code with your GaussianPyramid and LaplacianPyramid so i hope 
+you would not take more points off, on that part. Just asking that youll change the
+parameters that pyramidBlending gets accordinly (now its 2,5,5 but im prety sure it need
+to be 7,11,8 with good pyramids).
+Thank you for understandin.

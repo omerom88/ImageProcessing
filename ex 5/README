@@ -1,0 +1,70 @@
+omerom88 
+Impr – ex5
+Omer Rom
+301544383 
+
+- Matlab Version: R2015a
+- List of files: ex5.zip that contains: 	
+	- README - this file.	
+	- createDB.m - Sample 5 × 5 patches from levels 1,2,3 of the input pyramid.
+	- createPyramid.m - Create a pyramid from the input image.
+	- findNearestNeighbors.m - Find the 3 nearest neighbors for each patch in the input 
+images from the patches in the DB.
+	- getImage.m - given an image of the rendered pyrmamid, sampling indices from the 
+rendered pyrmamid, and assignment indices in the highres image return a high resolution image
+	- getSamplingCenters.m - Given 3 nearest neighbors for each patch of the input image, 
+from the patches DB, find the location of parent patch in the rendered pyramid image.
+	- getSamplingInformation.m - Get the information for sampling a high resolution image.
+	- renderPyramidEx5.m - Summary of this function goes here Getting a pyramid and draw it into a single image.
+	- samplePatches.m -  Sample 5 × 5 patches from the input image.
+	- superResolution.m - Getting an image and returns high resolution image with doubled size.
+	- transformPointsLevelsUp.m - Given position of points in some levels of the pyramid,  
+return their location in an upper levels of the pyramid.
+	- translateImageHalfPixel.m - Given an image return two images: out_x,out_y that are the 
+result of shifting the image 0.5 pixel right, and 0.5 pixel down respectively.
+	- weightsSetting.m - Given 3 nearest neighbors for each patch of the input image find a threshold (maximum distance) 
+for each input patch. Next, give a weight for each candidate based on its distance from the input patch. denote m,n such 
+that [m,n]=size(pyr{4})
+	- MyResult.m - runs the procedure on butterfly.png and on two more images.
+	- Images:
+		- butterfly.png (supplied to us)
+		- purp.jpg (my exemple)
+		- sculpture.jpg (my exemple)
+- Questions:
+butterfly.png - 
+	kept: 
+	1. edges - the borders of butterfly, the borders of the branchs
+	2. bluered areas - all the backround (green leavs) stays the same
+	
+	loses:
+	1. details - thin lines and small shapes (like on the wings, and the feeler)
+	2. shapes - we can see that in some places we losing the original shapes of colors/areas
+		    (as exemple we can look on the brown areas in the image)
+
+purp.jpg -
+	kept: 
+	1. edges - same like in the butterfly, borders that we could see in the original image, 
+		   we can see in the big pic.
+	2. high resolution details - like the shades of drops in the 'splash' are supraisily
+				     kept in the big pic.
+	
+	loses:
+	1. small details - we can see in the some black hole in the shapes of the bucket the we 
+		           can't see it in the big pic. The algorithem just missed it.
+	2. shapes - we can see in the small image that around the bucket ther's a black circle,
+		    and around the big pic we can see it white. 
+
+sulpture.jpg - 
+	kept:
+	1. edges - like the other exemples, we can see it very clearly here the borders and edges are kept.
+	2. shapes - we can look inside the sculpter (inside the gramophone) and see how the shapes are kept very nicely.
+
+	loses:
+	1. sharp details - good exemple is the cable that lie in base of the gramophone, and we can not recognize it in the
+			   big image, for the same reason we mentioned before.
+	2. shades - we can look on the base of the gramophone, and look on the shades and shapes in the wood. we can see that
+		    the algorithem blured it and it doesn't look like wood anymore.
+	3. colors meeting - another intersting thing that the algorithem losing here is the meeting between colors (the object
+			    and the backround), we can see is much sharp and not natural here.
+	 
+

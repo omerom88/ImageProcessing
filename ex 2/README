@@ -1,0 +1,29 @@
+omerom88
+IP - ex2
+Omer Rom
+301544383
+
+- Matlab Version: R2015a
+- List of files: EX2.zip that includes:
+	- DFT.m - converts a 1D discrete signal to its fourier representation.
+	- IDFT.m - converts a fourier representation to its 1D discrete signal.
+	- DFT2.m - converts a 2D discrete signal to its fourier representation.
+	- IDFT2.m - converts a fourier representation to its 2D discrete signal.
+	- convDerivative.m - Computes the magnitude of image derivatives.
+	- fourierDerivative.m - Computes the magnitude of image derivatives using fourier transform.
+	- blurInImageSpace.m - Performs image blurring using 2D convolution between an image and a gaussian kernel.
+	- blurInFourierSpace.m - Performs image blurring using 2D convolution between an image and a gaussian kernel in fourier space.
+	- buildGaussianMask.m - building a gausian filter
+- Question from section 2:
+	1. The difference of the magnitude come from the fact that derivation in image space is discrete and 
+	   therefore approximation, which means we "losing" values. The derivation in freq. space is continuous 
+	   and more accurate. For that reason the derivation is different, and the magnitudes as well.
+- Question from section 3:
+	1. The reason we need to shift to the center, is when we perform the operations (in that case convolution) 
+	   with two signals, we need them to be located in the same spot. If the mask center are
+	   not in (0,0) we won't get the result that we want from the filter, which means we'll trasform the wrong 
+	   mask, and filtering the wrong frequencies.
+	2. Like we learned in class, fourier transform of gaussian function is gaussian, but with an inverse variance.
+	   it means that if the original mask was narrow the mask after fourier will be wide, and vice versa.
+	   And as we know by now, convolution of a given image with wide gaussian mask, and convolution with
+	   narrow mask will give a different results. 

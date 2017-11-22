@@ -1,0 +1,45 @@
+omerom88 
+Impr – ex3
+Omer Rom
+301544383 
+
+- Matlab Version: R2015a
+- List of files: ex3.zip that includes: 
+	- README - this file.	
+	- GaussianPyramid.m - construct a Gaussian pyramid of a given image.
+	- LaplacianPyramid.m - construct a Laplacian pyramid of a given image.
+	- LaplacianToImage.m - reconstruction of an image from its Laplacian Pyramid.
+	- renderPyramid.m - function to display a given pyramid.
+	- displayPyramid.m - display a given pyramid.
+	- pyramidBlending.m - blend two given images into one blended image.
+	- blendingExample1.m - an example of blending two given images.
+	- blendingExample2.m - an example of blending two given images
+	- expand.m - expands an image to double size, using a blurring mask.
+	- reduce.m - reduce image size to an half of its size, using blurring mask.
+	- buildGaussianMask.m - building a Gaussian filter. (from ex2)
+	- ImReadAndConvert - Reads a given image file and converts it into a given representation. (from ex1)
+	- Additional images:
+		- Hertzel.jpg
+		- Bob Marley.jpg
+		- Mask_1.jpg
+		- Sacher Garden
+		- Blue Lake.jpg
+		- Mask_2.jpg 
+
+ 
+- Question from section 3.2:
+	The coefficient vector is a function to convert the freq. to the real number. Each level 
+	of the Laplacian Pyramid contain different group of freq. that the original image contain. 
+	So this is the reason we need to multiply every level in a different coefficient number…
+ - Question from section 4.2:
+	- Different size of filters: 
+		The size of the image filter determine the width of the freq. in the levels of the pyramid, 	
+		so the size of the filter effect the color matching and the stitching in the blending action. 		
+		From play with it, I learned that small filter create a less color matching and a rough seams 
+		(means you can see them easily), and large filter gives a smooth blending and soft seams 
+		(means the blending looks more natural).
+	- Different number of levels:
+		The number of levels effect on the quality of the blend. The last level of the pyramid contain 
+		all the lowest freq. that weren’t in the other levels, that means that the more levels there is in 
+		the pyramid, the finer splitting into freq. And that means less freq. in the last level, and the result 
+		is less smooth image, or in a different words, better sharpen quality picture.
